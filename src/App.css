@@ -21,6 +21,19 @@
   border :none;
 }
 
+.header .nav li{
+  list-style-type: none;
+  float:left;
+  color:white;
+  padding : 5px; 
+}
+
+.header .nav li a {
+  text-decoration-line: none;
+  color : white;
+  font-size : 20px;
+}
+
 section{
   padding :1rem;
 }
