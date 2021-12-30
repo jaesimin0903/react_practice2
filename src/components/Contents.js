@@ -126,8 +126,10 @@ const Contents = () => {
     if(loading) return <div>loading...</div>;
         return (
         <section>
-        <h2>국내 코로나 현황</h2>
-        <div className="contents" name="home">
+        <a name="home" className="tm"></a>  
+        <div className="contents" >
+        <h2>JAESIMIN</h2>
+        <div></div>
             <div>
                 <Bar data={confirmedData} options = {
                     {title : {display : true, text: "누적 확진자 추이", fontSize : 16}},
@@ -146,6 +148,7 @@ const Contents = () => {
                     {legend : {display : true, position:"bottom"} }
                 } />
             </div>
+            
         </div>
       </section> 
     )

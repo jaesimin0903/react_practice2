@@ -126,28 +126,14 @@ const Introduction = () => {
     if(loading) return <div>loading...</div>;
         return (
         <section>
-        <a name="introduction"></a>
-        <h2 name="home">국내 코로나 현황</h2>
         
-        <div className="contents" name="home">
-            <div>
-                <Bar data={confirmedData} options = {
-                    {title : {display : true, text: "누적 확진자 추이", fontSize : 16}},
-                    {legend : {display : true, position:"bottom"} }
-                } />
-            </div>
-            <div>
-                <Line data={quarantinedData} options = {
-                    {title : {display : true, text: "월별 격리자 현황", fontSize : 16}},
-                    {legend : {display : true, position:"bottom"} }
-                } />
-            </div>
-            <div>
-                <Doughnut data={comparedData} options = {
-                    {title : {display : true, text: "누적 확진, 해제, 사망", fontSize : 16}},
-                    {legend : {display : true, position:"bottom"} }
-                } />
-            </div>
+        
+        <a name="introduction" className="tm"></a>
+        <div name="home">
+        
+        <h2 >Introduction</h2>
+            
+            <input type="button" style={{height:"1000px"}}></input>
         </div>
       </section> 
     )

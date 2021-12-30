@@ -3,12 +3,27 @@
   flex-direction: column;
 }
 
+body{
+  font-family: nexonLight;
+}
+@font-face {
+  font-family: "nexonLight";
+  src: url("./fonts/NEXON Lv1 Gothic Low OTF Light.otf") format('opentype');
+  font-weight: normal;
+  font-size : normal;
+  
+}
+
 .header{
   padding : 1rem 2rem;
   background : #3b5998;
   display :flex;
   justify-content: space-between;
   align-items: center;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
 }
 .header h1 {
   color : #fff;
@@ -61,7 +76,14 @@ section{
   padding :1rem;
 }
 
+.tm{
+  padding-top:110px;
+  margin-top:-110px;
+  display:inline-block;
+}
+
 .contents{
+  padding-top: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
