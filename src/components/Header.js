@@ -5,9 +5,9 @@ const Header = () => {
         <header className="header">
         <h1>COVID-19</h1>
         <ul className="nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Introduction</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#projects">Projects</a></li>
         </ul>
         <select>
             <option>국내</option>

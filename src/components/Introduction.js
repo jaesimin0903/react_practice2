@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Bar, Doughnut, Line } from "react-chartjs-2"
 import Chart from 'chart.js/auto'
 
-const Contents = () => {
+const Introduction = () => {
     
     const [confirmedData, setConfirmedData] = useState({})
     const [quarantinedData, setQuarantinedData] = useState({})
@@ -126,7 +126,9 @@ const Contents = () => {
     if(loading) return <div>loading...</div>;
         return (
         <section>
-        <h2>국내 코로나 현황</h2>
+        <a name="introduction"></a>
+        <h2 name="home">국내 코로나 현황</h2>
+        
         <div className="contents" name="home">
             <div>
                 <Bar data={confirmedData} options = {
@@ -152,4 +154,4 @@ const Contents = () => {
         
 }
 
-export default Contents
+export default Introduction

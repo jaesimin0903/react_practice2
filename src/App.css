@@ -32,6 +32,29 @@
   text-decoration-line: none;
   color : white;
   font-size : 20px;
+  padding:10px;
+  border : 1px solid rgb(206, 205, 253);
+  border-radius : 20px;
+}
+
+.header .nav li a:active {
+  text-decoration-line: none;
+  color : rgb(206, 205, 253);
+  background-color: #3b5998;
+  font-size : 20px;
+  padding:10px;
+  border : 1px solid rgb(206, 205, 253);
+  border-radius : 20px;
+}
+
+.header .nav li a:hover {
+  text-decoration-line: none;
+  color : #3b5998;
+  background-color: rgb(206, 205, 253);
+  font-size : 20px;
+  padding:10px;
+  border : 1px solid rgb(206, 205, 253);
+  border-radius : 20px;
 }
 
 section{
