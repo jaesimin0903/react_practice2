@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Bar, Doughnut, Line } from "react-chartjs-2"
 import Chart from 'chart.js/auto'
 
-const Project = () => {
+const Introduction = () => {
     
     const [confirmedData, setConfirmedData] = useState({})
     const [quarantinedData, setQuarantinedData] = useState({})
@@ -126,20 +126,18 @@ const Project = () => {
     if(loading) return <div>loading...</div>;
         return (
         <section>
-        <a name="home" className="tm"></a>  
-        <div className="contents" >
-            <h2>JAESIMIN</h2>
-            <br /> 
-            <div className="p-5 mb-4 bg-light rounded-3">
-                <div className="container-fluid py-5">
-                    <h1 className="display-5 fw-bold">Welcome to Jaemin's homepage</h1>
-                    <p className="col-md-8 fs-4">개빡치네</p>
-                </div>
-            </div>
+        
+        
+        <a name="projects" className="tm"></a>
+        <div name="home">
+        
+        <h2 >Projects</h2>
+            
+            <input type="button" style={{height:"1000px"}}></input>
         </div>
       </section> 
     )
         
 }
 
-export default Project
+export default Introduction

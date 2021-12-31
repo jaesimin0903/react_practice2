@@ -129,11 +129,22 @@ const Introduction = () => {
         
         
         <a name="introduction" className="tm"></a>
+        
         <div name="home">
         
-        <h2 >Introduction</h2>
-            
-            <input type="button" style={{height:"1000px"}}></input>
+            <h2 >Introduction</h2>
+            <br />
+            <div className="p-5 mb-4 bg-warning rounded-3">
+                <div className="container-fluid py-5">
+                    <div className="row">
+                        <div className="col-4">사진</div>
+                        <div className="col-8">기본정보</div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg">이력</div>
+                    </div>
+                </div>
+            </div>
         </div>
       </section> 
     )

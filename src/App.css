@@ -84,8 +84,7 @@ section{
 
 .contents{
   padding-top: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
 }
 .App-logo {
   height: 40vmin;
