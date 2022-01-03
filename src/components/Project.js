@@ -123,7 +123,7 @@ const Introduction = () => {
             
         
     }, [loading])
-    if(loading) return <div>loading...</div>;
+    
         return (
         <section>
         

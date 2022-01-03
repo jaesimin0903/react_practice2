@@ -123,7 +123,7 @@ const Project = () => {
             
         
     }, [loading])
-    if(loading) return <div>loading...</div>;
+   
         return (
         <section>
         <a name="home" className="tm"></a>  

@@ -123,7 +123,7 @@ const Introduction = () => {
             
         
     }, [loading])
-    if(loading) return <div>loading...</div>;
+    
         return (
         <section>
         
@@ -137,8 +137,15 @@ const Introduction = () => {
             <div className="p-5 mb-4 bg-warning rounded-3">
                 <div className="container-fluid py-5">
                     <div className="row">
-                        <div className="col-4">사진</div>
-                        <div className="col-8">기본정보</div>
+                        <div className="col-5">
+                            <img style={{height:"100px"}} src="images/i15720255818.png"></img>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                        </div>
+                        <div className="col-7">
+                            <h3>이름 : 최재민</h3>
+                            <h3>학교 : 동국대학교</h3>
+                            <h3>생년월일 : 98.09.03</h3>
+                            <h3>주 언어 : C++, Java</h3>
+                        </div>
                     </div>
                     <div className="row">
                         <div className="col-lg">이력</div>
