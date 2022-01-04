@@ -138,16 +138,27 @@ const Introduction = () => {
                 <div className="container-fluid py-5">
                     <div className="row">
                         <div className="col-5">
-                            <img style={{height:"100px"}} src="images/i15720255818.png"></img>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                            <img className=""style={{height:"100px"}} src="images/i15720255818.png"></img>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
                         </div>
                         <div className="col-7">
-                            <h3>이름 : 최재민</h3>
-                            <h3>학교 : 동국대학교</h3>
-                            <h3>생년월일 : 98.09.03</h3>
-                            <h3>주 언어 : C++, Java</h3>
+                            <div className="row">
+                                <div className="col-6">
+                                    <h3><b>이름 : </b></h3>
+                                    <h3><b>학교 : </b></h3>
+                                    <h3><b>생년월일 : </b></h3>
+                                    <h3><b>주 언어 : </b></h3>
+                                </div>
+                                <div className="col-6">
+                                    <h3>최재민</h3>
+                                    <h3>동국대학교</h3>
+                                    <h3>98.09.03</h3>
+                                    <h3>C++, Java</h3>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row py-5 text-center">
                         <div className="col-lg">이력</div>
                     </div>
                 </div>
