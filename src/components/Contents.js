@@ -128,12 +128,11 @@ const Project = () => {
         <section>
         <a name="home" className="tm"></a>  
         <div className="contents" >
-            <h2>JAESIMIN</h2>
             <br /> 
             <div className="p-5 mb-4 bg-light rounded-3">
                 <div className="container-fluid py-5">
-                    <h1 className="display-5 fw-bold">Welcome to Jaemin's homepage</h1>
-                    <p className="col-md-8 fs-4">개빡치네</p>
+                    <h1 className="display-5 fw-bold text-center">Welcome to Jaemin's homepage</h1>
+                    
                 </div>
             </div>
         </div>

@@ -5,124 +5,6 @@ import Chart from 'chart.js/auto'
 
 const Introduction = () => {
     
-    const [confirmedData, setConfirmedData] = useState({})
-    const [quarantinedData, setQuarantinedData] = useState({})
-    const [comparedData, setComparedData] = useState({})
-
-    const [loading, setLoading] = useState(true);
-    const [array, setArray] = useState(0)
-    const count = 0;
-    useEffect(()=>{
-        let completed = false;
-        
-        const fetchEvents = async ()=>{
-           
-            const res= await axios.get("https://api.covid19api.com/total/dayone/country/kr");
-            
-            if(!completed){
-                console.log("completed=false")
-                makeData(res.data)
-            }            
-        } 
-        function setArray(){
-
-        }
-
-        const makeData = (items)=>{
-                const arr = items.reduce((acc, cur)=>{
-                const currentDate = new Date(cur.Date);
-                const year = currentDate.getFullYear();
-                const month = currentDate.getMonth();
-                const date = currentDate.getDate();
-                const confirmed = cur.Confirmed;
-                const active = cur.Active;
-                const death = cur.Deaths; 
-                const recovered = cur.Recovered;
-                
-                const findItem = acc.find(a=>a.year === year && a.month === month);
-
-                if(!findItem){
-                    acc.push({
-                        year,
-                        month,
-                        date,
-                        confirmed,
-                        active,
-                        death,
-                        recovered
-                    })
-                }
-                if(findItem && findItem.date < date){
-                    findItem.active = active;
-                    findItem.death = death;
-                    findItem.date = date;
-                    findItem.year = year;
-                    findItem.month = month;
-                    findItem.recovered = recovered;
-                    findItem.confirmed = confirmed;
-                }
-                
-                console.log("array+1")
-                return acc
-                   
-                
-            }, [])
-            
-            console.log(arr);
-    
-            const labels = arr.map(a => `${a.month + 1}월`)
-            console.log(labels);
-            const datas = arr.map(a=>a.confirmed) 
-            console.log(datas);
-            setConfirmedData({
-                labels,
-                datasets:[
-                    {
-                        label:"국내 누적 환진자",
-                        backgroundColor : "salmon",
-                        fill : true,
-                        data : arr.map(a=>a.confirmed)
-                    },
-                ]
-            });
-            setQuarantinedData({
-                labels,
-                datasets:[
-                    {
-                        label:"월별 격리자 현황",
-                        borderColor : "salmon",
-                        fill : true,
-                        data : arr.map(a=>a.active)
-                    },
-                ]
-            });
-            const last = arr[arr.length -1];
-            console.log(last.recovered)
-            setComparedData({
-                labels: ["확진자", "격리해제", "사망"],
-                datasets:[
-                    {
-                        label:["누적 확진, 해제, 사망 비율"],
-                        backgroundColor : ["#ff3d67","#059bff","#ffc233"],
-                        borderColor : ["#ff3d67","#059bff","#ffc233"],
-                        fill : false,
-                        data : [last.confirmed, last.recovered, last.death]
-                    },
-                ]
-            });
-            setLoading(false)
-        }
-        console.log("array" + array)
-        
-        fetchEvents()
-        return() =>{
-            completed = true; 
-            console.log("completed=true");
-            
-        }
-            
-        
-    }, [loading])
     
         return (
         <section>
@@ -132,8 +14,31 @@ const Introduction = () => {
         <div name="home">
         
         <h2 >Projects</h2>
-            
-            <input type="button" style={{height:"1000px"}}></input>
+            <br />
+            <div className="p-5 mb-4 bg-primary rounded-3">
+                <div className="container-fluid py-5">
+                    <div className="row">
+                        <h3><b>1. PITMON</b></h3>
+                        <h3><b>팀원 수 : </b>4명</h3>
+                        <h3><b>사용한 언어 : </b>C++, Flutter</h3>
+                        <h3><b>제작기간 : </b>21.11.01~21.12.01</h3>
+                        <h3><b>프로젝트 설명 : </b>아두이노를 이용하여 운동센서를 개발</h3>
+                        <h3><b>사진</b></h3>
+                    </div>
+                </div>
+            </div>
+            <div className="p-5 mb-4 bg-primary rounded-3">
+                <div className="container-fluid py-5">
+                    <div className="row">
+                        <h3><b>2. MOVIESTAR</b></h3>
+                        <h3><b>팀원 수 : </b>2명</h3>
+                        <h3><b>사용한 언어 : </b>HTML, CSS, JavaScript, JSP, MySQL</h3>
+                        <h3><b>제작기간 : </b>21.9.01~21.12.01</h3>
+                        <h3><b>프로젝트 설명 : </b>영화 평점사이트 개발, 영화진흥위원회 API 를 사용하여 박스오피스 구현</h3>
+                        <h3><b>사진</b></h3>
+                    </div>
+                </div>
+            </div>
         </div>
       </section> 
     )
